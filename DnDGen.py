@@ -18,7 +18,6 @@ selected_file_path = None
 is_opened_from_list = False
 
 def open_tab(mode):
-    """Комментарий"""
     global gen_tab_counter
     global race
     global df
@@ -718,7 +717,6 @@ def open_tab(mode):
                     skill_window.destroy()
                 
                 def on_cancel():
-                    """Comment"""
                     skill_window.destroy()
                 
                 button_frame = tk.Frame(skill_window)
@@ -1665,7 +1663,6 @@ def open_tab(mode):
                         skill_window.destroy()
                     
                     def on_cancel():
-                        """Comment"""
                         skill_window.destroy()
                     
                     button_frame = tk.Frame(skill_window)
@@ -1945,25 +1942,21 @@ def open_tab(mode):
 
             
 def close_tab():
-    """Коммнетарий"""
     current_tab_index = tab_control.index("current")
     tab_control.forget(current_tab_index)
     update_tabmenu()
 
 def update_tabmenu():
-    """Коммнетарий"""
     tabmenu.delete(0, tk.END)
     tab_list = [tab_control.tab(i, option='text') for i in range(tab_control.index('end'))]
     for tab in tab_list:
         tabmenu.add_command(label=tab, command=lambda t=tab: go_to_tab(t))
 
 def go_to_tab(tab):
-    """Коммнетарий"""
     index = [tab_control.tab(i, option='text') for i in range(tab_control.index('end'))].index(tab)
     tab_control.select(index)
 
 def update_log():
-    """Коммнетарий"""
     global list_file_paths
     global list_files
     global list_file_paths_from_log
